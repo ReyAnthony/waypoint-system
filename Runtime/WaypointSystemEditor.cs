@@ -40,7 +40,7 @@ namespace WPSystem.Runtime
             if (_loopType == LoopType.Loop)
             {
                 //draws the last arrow when looping (the rest is drawed bu the waypoint themselves)
-                Gizmos.color = Color.white;
+                Gizmos.color = this._pathColor;
                 var lastWp = this.transform.GetChild(this.transform.childCount - 1);
                 Gizmos.DrawLine(_startingWaypoint.transform.position, lastWp.transform.position);
                 Gizmos.DrawWireMesh(Resources.Load<MeshFilter>("direction_arrow").sharedMesh,
@@ -100,6 +100,7 @@ namespace WPSystem.Runtime
             _defaultStickMode = WaypointSettings.GetInstance().DefaultStickMode;
             _loopType = WaypointSettings.GetInstance().DefaultLoopType;
             _waypointsColor = WaypointSettings.GetInstance().WaypointsColor;
+            _pathColor = WaypointSettings.GetInstance().PathColor;
             _defaultDistanceToReach = WaypointSettings.GetInstance().DefaultDistanceToReach;
             StartAtTheNearest = WaypointSettings.GetInstance().StartAtTheNearest;
         }

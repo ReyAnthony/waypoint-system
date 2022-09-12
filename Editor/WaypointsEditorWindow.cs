@@ -19,7 +19,7 @@ namespace WPSystem.Editor
             //bool to avoid adding the function multiple times to the callback 
             if (!_hasEnabled)
             {
-                SceneView.onSceneGUIDelegate += OnScene; //hooking to the scene GUI, to draw on it. 
+                SceneView.duringSceneGui += OnScene; //hooking to the scene GUI, to draw on it. 
                 
                 //just used to intercept the delete event in hierarchy. 
                 EditorApplication.hierarchyWindowItemOnGUI += (id, rect) =>
@@ -34,7 +34,7 @@ namespace WPSystem.Editor
         
         public static void Disable()
         {
-            SceneView.onSceneGUIDelegate -= OnScene;
+            SceneView.duringSceneGui -= OnScene;
             _hasEnabled = false;
         }
 

@@ -16,6 +16,7 @@ namespace WPSystem.Runtime
         public Waypoint StartingWaypoint => _startingWaypoint.GetComponent<Waypoint>();
         public Waypoint LastWayPoint => this.transform.GetChild(this.transform.childCount - 1).GetComponent<Waypoint>();
         public Color WaypointsColor => _waypointsColor;
+        public Color PathColor => _pathColor;
         
 #pragma warning disable 0649
         [SerializeField, HideInInspector] private GameObject _startingWaypoint;
@@ -29,6 +30,7 @@ namespace WPSystem.Runtime
         [Header("Changing these will impact the whole system")]
 
         [SerializeField, Tooltip("Color for the waypoints")] private Color _waypointsColor;
+        [SerializeField, Tooltip("Color for the path")] private Color _pathColor;
         [SerializeField, Tooltip("Should you start at the starting waypoint ? Or the nearest ?")] 
         private bool _startAtTheNearest;
         

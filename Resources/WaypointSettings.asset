@@ -15,6 +15,7 @@ MonoBehaviour:
   _defaultStickMode: 1
   _defaultDistanceToReach: 0.5
   _waypointsColor: {r: 0, g: 0, b: 1, a: 1}
+  _pathColor: {r: 0, g: 0, b: 0, a: 1}
   _startAtTheNearest: 1
   _defaultLoopType: 0
   _uiPosition: 1

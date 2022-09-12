@@ -1,0 +1,26 @@
+﻿{
+  "name": "com.anghr.waypoints",
+  "version": "1.0.0",
+  "displayName": "WPSystem",
+  "description": "Waypoint System",
+  "category": "Tools",
+  "unity": "2021.3",
+  "dependencies": {
+  },
+  "samples": [
+    {
+      "displayName": "Demo scene",
+      "description": "Contains sample usage scene for Caravan",
+      "path": "Samples~/Demo/"
+    }
+  ],
+  "keywords": [
+    "Path", "Waypoints"
+  ],
+  "author": {
+    "name": "Anthony Rey",
+    "email": "me@anghr.com",
+    "url": "https://github.com/ReyAnthony/waypoint-system"
+  },
+  "type": "library"
+}

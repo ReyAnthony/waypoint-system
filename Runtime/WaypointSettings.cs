@@ -37,6 +37,9 @@ namespace WPSystem.Runtime
         [SerializeField, Tooltip("Default color for the waypoints")] 
         private Color _waypointsColor = Color.blue;
         
+        [SerializeField, Tooltip("Default color for the path")] 
+        private Color _pathColor = Color.black;
+        
         [SerializeField, Tooltip("If set to true, the first waypoint will be the nearest, else the first one (the flag)")] 
         private bool _startAtTheNearest;
         
@@ -55,6 +58,7 @@ namespace WPSystem.Runtime
         public StickMode DefaultStickMode => _defaultStickMode;
         public float DefaultDistanceToReach => _defaultDistanceToReach;
         public Color WaypointsColor => _waypointsColor;
+        public Color PathColor => _pathColor;
         public bool StartAtTheNearest => _startAtTheNearest;
         public LoopType DefaultLoopType => _defaultLoopType;
         public UIPosition UiPosition => _uiPosition;

@@ -1,5 +1,6 @@
 ﻿#if UNITY_EDITOR
 using UnityEditor.Experimental.SceneManagement;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -33,7 +34,7 @@ namespace WPSystem.Runtime
                 var nextPos = this.NextWaypoint.transform.position;
                 var dir = (nextPos - position);
                 
-                Gizmos.color = Color.white;
+                Gizmos.color = _system.PathColor;
                 Gizmos.DrawLine(position, nextPos);
                 Gizmos.DrawWireMesh(Resources.Load<MeshFilter>("direction_arrow").sharedMesh, 
                     (nextPos + position) / 2 , 

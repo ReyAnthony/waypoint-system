@@ -24,7 +24,7 @@ namespace WPSystem.Editor
             AssemblyReloadEvents.afterAssemblyReload += () => { GetInstance(); };
         }  
         
-        [MenuItem("Waypoints/Enable")]
+        [MenuItem("Tools/Waypoints/Enable")]
         public static void Enable()
         {
             GetInstance()._isActive = true;
@@ -32,7 +32,7 @@ namespace WPSystem.Editor
             WaypointEditorWindow.Enable();
         }
         
-        [MenuItem("Waypoints/Disable")]
+        [MenuItem("Tools/Waypoints/Disable")]
         public static void Disable()
         {
             GetInstance()._isActive = false;
