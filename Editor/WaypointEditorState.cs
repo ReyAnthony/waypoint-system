@@ -9,7 +9,7 @@ namespace WPSystem.Editor
      * Keeps the state of the editorWindow
      * If is _isActive is true, we will show the plugin in the view
      */
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName = "Waypoints Editor/WaypointEditorState")]
     [InitializeOnLoad]
     public class WaypointEditorState : ScriptableObject
     {

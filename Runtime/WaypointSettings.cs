@@ -14,7 +14,7 @@ namespace WPSystem.Runtime
         Down
     }
     
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName = "Waypoints Editor/WaypointSettings")]
 #if UNITY_EDITOR
     [InitializeOnLoad] //allow to call the static constructor
 #endif
