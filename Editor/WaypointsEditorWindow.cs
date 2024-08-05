@@ -42,9 +42,11 @@ namespace WPSystem.Editor
         {
             void BeginCentered(bool area)
             {
+                var size = GetWindow<SceneView>().position.size;
+                
                 if(area) Handles.BeginGUI();
-                if(area) GUILayout.BeginArea(new Rect(0, 0, Screen.width, Screen.height));
-                if(area) GUILayout.Space(WaypointSettings.GetInstance().UiPosition == UIPosition.Top ? 5 : Screen.height - 100);
+                if(area) GUILayout.BeginArea(new Rect(0, 0, size.x, size.y));
+                if(area) GUILayout.Space(WaypointSettings.GetInstance().UiPosition == UIPosition.Top ? 5 : size.y - 100);
                     GUILayout.BeginHorizontal();
                         GUILayout.FlexibleSpace();
                             
